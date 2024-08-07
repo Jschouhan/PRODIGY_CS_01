@@ -2,7 +2,6 @@ def caesar_cipher_Encrypt(text,shift):
     result=""
     for  i in range(len(text)):
         char=text[i]
-        #encrypt upper case characters
         if char.isalpha():
             shift_base = 65 if char.islower() else 97
             result+=chr((ord(char)+shift- shift_base)% 26 + shift_base)
